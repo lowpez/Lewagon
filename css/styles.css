@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap');
+
+body {
+	background:#f1f2f3;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+input[type="range"]{
+    display: block;
+}
+/*ELEMENTO: BOTON*/
+
+.circular {
+    color:black;
+    background: #fff no-repeat 50% 38px;
+    margin-bottom: 2em;
+    font-size: 1.4em;
+    font-weight: normal !important;
+    width:250px;
+    height:250px;
+    border-radius:50%; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular:hover {
+    box-shadow: 0 0 50px #ccc;
+    /*text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
+}
+
+[class^="pe-7s-"], 
+[class*=" pe-7s-"],
+.las {
+	font-size: 4em;
+	font-weight: bold !important;
+}
+
+/*ESTILOS DE BOTONES*/
+
+.btn-blue {
+    background: #3a87ff !important;
+}
+.btn-purple {
+    background: #6a40cc !important;
+}
+.btn-red {
+    background: #ff7956 !important;
+}
+.btn-yellow {
+    background: #fbd669 !important;
+}
+.btn-green {
+    background: #4dce9d !important;
+}
+
+.btn-blue-gradient {
+    background: linear-gradient(180deg, #7fbaff, #7096ff) !important;
+}
+.btn-purple-gradient {
+    background: linear-gradient(180deg, #b596ff, #9f77ff) !important;
+}
+.btn-red-gradient {
+    background: linear-gradient(180deg, #f38d5a, #fc7552) !important;
+}
+.btn-yellow-gradient {
+    background: linear-gradient(180deg, #fdbe55, #fcaa54) !important;
+}
+.btn-green-gradiente {
+    background: linear-gradient(180deg, #4ccd6d, #4dce9d) !important;
+}
+
+
+
+
+

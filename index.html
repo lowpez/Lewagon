@@ -21,105 +21,74 @@
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-  <link rel="stylesheet" href="assets/Pe-icon-7-stroke.css">
-
-<!-- Optional - Adds useful class to manipulate icon font display -->
-<link rel="stylesheet" href="assets/helper.css">
-
+<link rel="stylesheet" href="css/styles.css?v=1.0">
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
 </head>
 
 <body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"><!-- NAV -->
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">L O G O</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mas regalados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><!-- NAV -->
   <!-- your content here... -->
-        <div class="container">
+        <div class="container"><!-- CONTAINER -->
           
-        <div class="p-5 mb-4 bg-light rounded-3">
-          <div class="container-fluid py-3">
-            <h1 class="display-5 fw-bold">¿Para quien es?</h1>
-            <!--<p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron.</p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
-
-            <form>
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="range" name="range" step="50000" min="3000" max="500000" value="" onchange="rangePrimary.value=value">
-              <input type="text" id="rangePrimary" class="form-control" />
-            </form>
-
-
-
-          </div>
-        </div>
-
-          <div class="row d-flex justify-content-around text-center">
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto mx-auto">
-              <span class="pe-7s-female"></span>
-              <p>Mujer</p> 
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              <span class="pe-7s-male"></span>
-              <p>Hombre</p> 
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              <i class="las la-female"></i>
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-                <i class="las la-male"></i>
-                <p>Hombre</p>
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-                <i class="las la-venus"></i>
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto btn-yellow">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-               <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
+          <div class="p-5 mb-4 rounded-3">
+            <div class="container-fluid py-3">
+              <h1 class="display-5 text-center fw-bold">¿Para quien es?</h1>
+              <!--<p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron.</p>
+              <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
             </div>
           </div>
-        </div>
+
+          <div class="row d-flex justify-content-around text-center"><!-- ELEMENTOS -->
+
+            <figure class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+              <a href="questions+answers.html">
+                <figcaption class="circular mx-auto mx-auto">
+                <i class="las la-smile-beam"></i>
+                <p>Le conozco bien</p> 
+                </figcaption>
+              </a>
+            </figure>
+            <figure class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+              <a href="">
+                <figcaption class="circular mx-auto">
+                <i class="las la-meh"></i>
+                <p>Le conozco poco</p> 
+                </figcaption>
+              </a>
+            </figure>
+
+          </div><!-- /ELEMENTOS -->
+        </div><!-- / CONTAINER -->
+
+        <footer class="footer mt-auto py-3 bg-light">
+          <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+          </div>
+        </footer>
   <script src="js/scripts.js"></script>
 </body>
 </html>

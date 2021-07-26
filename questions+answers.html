@@ -1,6 +1,5 @@
 <!doctype html>
-
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +25,7 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column h-100">
   <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"><!-- NAV -->
     <div class="container-fluid">
       <a class="navbar-brand" href="#">L O G O</a>
@@ -52,11 +51,12 @@
     </div>
   </nav><!-- NAV -->
   <!-- your content here... -->
+    <main class="flex-shrink-0">
       <div class="container"><!-- CONTAINER -->
           
-          <div class="p-5 mb-4 rounded-3">
+          <div class="p-5 pb-4 mb-0 rounded-3">
             <div class="container-fluid py-3">
-              <h1 class="display-5 text-center fw-bold">¿Para quien es?</h1>
+              <h1 aria-label="¿Para quien será?" class="display-5 text-center fw-bold">¿Para quien es?</h1>
               <!--<p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron.</p>
               <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
             </div>
@@ -66,7 +66,7 @@
       <div class="row d-flex justify-content-around text-center"><!-- ELEMENTOS -->
         <form id="regForm" action="action_page.php"><!-- FORM -->
           <div class="tab">
-            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <label aria-label="¿Es un regalo para una dama?" class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <span class="circular mx-auto">
                 <i class="las la-venus"></i>
                 <em>Mujer</em> 
@@ -74,7 +74,7 @@
               <input type="radio" name="gender" value="HTML" required>
             </label>
             
-            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <label aria-label="¿Es un regalo para un varon?" class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <span class="circular mx-auto">
                 <i class="las la-mars"></i>
                 <em>Hombre</em> 
@@ -84,45 +84,45 @@
           </div>
 
           <div class="tab">
-            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <label aria-label="¿Prefiere los canes?" class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <span class="circular mx-auto">
-                <i class="las la-venus"></i>
-                <em>fdfdf</em> 
+                <i class="las la-dog"></i>
+                <em>Doglover</em> 
                 </span>
-              <input type="radio" oninput="this.className = ''" name="input-3" value="HTML">
+              <input type="radio" oninput="this.className = ''" name="mascota" value="HTML">
             </label>
             
-            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <label aria-label="¿Prefiere los gatos?" class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <span class="circular mx-auto">
-                <i class="las la-mars"></i>
-                <em>afasfaf</em> 
+                <i class="las la-cat"></i>
+                <em>Catlover</em> 
                 </span>
-              <input type="radio" name="input-4" oninput="this.className = ''"  value="">
+              <input type="radio" name="mascota" oninput="this.className = ''"  value="">
             </label>
           </div>
 
           <div class="tab">
-            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <label aria-label="Para alguien introvertido" class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <span class="circular mx-auto">
-                <i class="las la-venus"></i>
-                <em>33333</em> 
+                <i class="las la-palette"></i>
+                <em>Mas artista</em> 
                 </span>
-              <input type="radio" oninput="this.className = ''" name="input-5" value="HTML">
+              <input type="radio" oninput="this.className = ''" name="inextrovertido" value="HTML">
             </label>
             
-            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <label aria-label="Para un extrovertido" class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <span class="circular mx-auto">
-                <i class="las la-mars"></i>
-                <em>55555</em> 
+                <i class="las la-biking"></i>
+                <em>Más deportista</em> 
                 </span>
-              <input type="radio" name="input-6" oninput="this.className = ''"  value="">
+              <input type="radio" name="inextrovertido" oninput="this.className = ''"  value="">
             </label>
           </div>
  
-          <div class="mx-auto">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-          </div>
+          <nav aria-label="Botones avanzar y retroceder" class="mx-auto">
+            <button type="button" aria-label="Al paso anterior" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" aria-label="Al siguiente paso" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </nav>
 
         <!-- Circles which indicates the steps of the form: -->
         <div style="text-align:center;margin-top:40px;">
@@ -135,7 +135,7 @@
       </div><!-- /ELEMENTOS -->
         
       </div><!-- / CONTAINER -->
-
+    </main>
         <footer class="footer mt-auto py-3 bg-light">
           <div class="container">
             <span class="text-muted">Place sticky footer content here.</span>

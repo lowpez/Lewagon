@@ -22,7 +22,7 @@ input[type="range"]{
 }
 
 input[type=radio] {
-   /*display:none;*/
+   display:none;
 }
 
 input[type=radio]:checked span{ 
@@ -135,12 +135,13 @@ a:visited {
  
 
 button {
-  background-color: #04AA6D;
+  background-color: #000;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
   font-size: 17px;
-  font-family: Raleway;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -149,7 +150,8 @@ button:hover {
 }
 
 #prevBtn {
-  background-color: #bbbbbb;
+  background-color: #fff;
+  color: black;
 }
 
 /* Make circles that indicate the steps of the form: */

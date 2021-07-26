@@ -6,10 +6,19 @@ showTab(currentTab); // Display the current tab
 function showTab(n) {
   // This function will display the specified tab of the form...
   var x = document.getElementsByClassName("tab");
-  x[n].style.display = "flex";
+  x[n].style.display = "block";	
+  // This part checks browser viewport size ...
+  /*var mediaqueryList = window.matchMedia("(min-width: 578px)");
+ 
+ 	if(mediaqueryList.matches) {
+	  x[n].classList.add("resize-me");
+	} else {
+	  x[n].style.display = "block";	
+	}*/
+
   //... and fix the Previous/Next buttons:
   if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("prevBtn").style.display = "none"; 
   } else {
     document.getElementById("prevBtn").style.display = "inline";
   }
@@ -20,6 +29,7 @@ function showTab(n) {
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
+
 }
 
 function nextPrev(n) {
@@ -43,22 +53,22 @@ function nextPrev(n) {
 
 function validateForm() {
   // This function deals with validation of the form fields
-  var x, y, i, valid = true;
+  var x, y, i, valid = false;
   x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  z = x[currentTab].querySelector('input[type = radio]:checked');
+  y = x[currentTab].getElementsByTagName('input');
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (z[i] == false || y[i].value == null) {
+    if (y[i].checked) {
       // add an "invalid" class to the field:
-      y[i].className += " invalid";
+      // y[i].className += " invalid";
       // and set the current valid status to false
-      valid = false;
+      valid = true;
     }
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
+  	// document.getElementById('container').innerHTML = '<div id="x"></div>';
     document.getElementsByClassName("step")[currentTab].className += " finish";
   }
   return valid; // return the valid status

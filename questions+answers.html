@@ -21,19 +21,13 @@
 <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-  <link rel="stylesheet" href="assets/Pe-icon-7-stroke.css">
-
-<!-- Optional - Adds useful class to manipulate icon font display -->
-<link rel="stylesheet" href="assets/helper.css">
-
+<link rel="stylesheet" href="css/styles.css?v=1.0">
 <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
 </head>
 
 <body>
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"><!-- NAV -->
     <div class="container-fluid">
       <a class="navbar-brand" href="#">L O G O</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,117 +50,118 @@
         </ul>
       </div>
     </div>
-  </nav>
+  </nav><!-- NAV -->
   <!-- your content here... -->
-        <div class="container"><!-- CONTAINER -->
+      <div class="container"><!-- CONTAINER -->
           
           <div class="p-5 mb-4 rounded-3">
             <div class="container-fluid py-3">
-              <h1 class="display-5 fw-bold">¿Para quien es?</h1>
+              <h1 class="display-5 text-center fw-bold">¿Para quien es?</h1>
               <!--<p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron.</p>
               <button class="btn btn-primary btn-lg" type="button">Example button</button>-->
-
-              <form>
-                <label for="range" class="form-label">Elige el precio maximo del presente</label>
-                <input type="range" name="range" step="0" min="3000" max="500000" value="" onchange="rangePrimary.value=value">
-                <label for="range" class="form-label">Email address</label>
-                <input type="text" id="rangePrimary" class="form-control" />
-              </form>
-
             </div>
           </div>
 
-          <div class="row d-flex justify-content-around text-center"><!-- ELEMENTOS -->
-
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto mx-auto">
-              <i class="las la-smile-beam"></i>
-              <p>Le conozco bien</p> 
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              <i class="las la-meh"></i>
-              <p>Le conozco poco</p> 
-              </div>
-            </div>
-
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto mx-auto">
-              <i class="las la-venus"></i>
-              <p>Mujer</p> 
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              <i class="las la-mars"></i>
-              <p>Hombre</p> 
-              </div>
-            </div>
-
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              <i class="las la-female"></i>
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-                <i class="las la-male"></i>
-                <p>Hombre</p>
-              </div>
-            </div>
-
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
+        
+      <div class="row d-flex justify-content-around text-center"><!-- ELEMENTOS -->
+        <form id="regForm" action="action_page.php"><!-- FORM -->
+          <div class="tab">
+            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <span class="circular mx-auto">
                 <i class="las la-venus"></i>
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto btn-yellow">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
+                <em>Mujer</em> 
+                </span>
+              <input type="radio" name="gender" value="HTML" required>
+            </label>
+            
+            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <span class="circular mx-auto">
+                <i class="las la-mars"></i>
+                <em>Hombre</em> 
+                </span>
+              <input type="radio" name="gender" value="HTML">
+            </label>
+          </div>
 
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-               <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
+          <div class="tab">
+            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <span class="circular mx-auto">
+                <i class="las la-venus"></i>
+                <em>fdfdf</em> 
+                </span>
+              <input type="radio" oninput="this.className = ''" name="input-3" value="HTML">
+            </label>
+            
+            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <span class="circular mx-auto">
+                <i class="las la-mars"></i>
+                <em>afasfaf</em> 
+                </span>
+              <input type="radio" name="input-4" oninput="this.className = ''"  value="">
+            </label>
+          </div>
 
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
-            <div class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-              <div class="circular mx-auto">
-              1 of 2 (stacked on mobile)
-              </div>
-            </div>
+          <div class="tab">
+            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <span class="circular mx-auto">
+                <i class="las la-venus"></i>
+                <em>33333</em> 
+                </span>
+              <input type="radio" oninput="this.className = ''" name="input-5" value="HTML">
+            </label>
+            
+            <label class="col-12 col-xs-6 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <span class="circular mx-auto">
+                <i class="las la-mars"></i>
+                <em>55555</em> 
+                </span>
+              <input type="radio" name="input-6" oninput="this.className = ''"  value="">
+            </label>
+          </div>
+ 
+          <div class="mx-auto">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+          </div>
 
-          </div><!-- /ELEMENTOS -->
+        <!-- Circles which indicates the steps of the form: -->
+        <div style="text-align:center;margin-top:40px;">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
 
-          <nav><!-- PREVIUS / NEXT -->
-            <ul class="pagination pagination-lg justify-content-center">
-              <li class="page-item"><a href="#" class="page-link">Previous</a></li>
-              <!--<li class="page-item"><a href="#" class="page-link">1</a></li>-->
-              <li class="page-item"><a href="#" class="page-link">Next</a></li>
-            </ul>
-          </nav><!-- PREVIUS / NEXT -->
-
-        </div><!-- / CONTAINER -->
+        </form><!-- / FORM -->
+      </div><!-- /ELEMENTOS -->
+        
+      </div><!-- / CONTAINER -->
 
         <footer class="footer mt-auto py-3 bg-light">
           <div class="container">
             <span class="text-muted">Place sticky footer content here.</span>
           </div>
         </footer>
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.js"></script> 
+
+  <script>
+    /*radio = document.getElementsByTagName("input");
+
+      document.getElementsByTagName("input").addEventListener("change", function() {
+        alert("checked radio 1");
+    });*/
+
+    var inputs = document.querySelectorAll("input");
+inputs.forEach(function(i){
+    i.addEventListener('click', function(el){
+        var clicked = el.currentTarget;
+        var active = clicked.parentElement.parentElement.querySelector('.selected');
+        active && active.classList.remove('selected');
+        clicked.parentElement.classList.add('selected');
+    });
+});
+
+    
+  
+  </script>
 </body>
 </html>

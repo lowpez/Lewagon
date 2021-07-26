@@ -12,24 +12,40 @@ h1{
     font-weight: bold;
 }
 
+em {
+   font-weight: normal;
+   font-style: normal;
+}
+
 input[type="range"]{
     display: block;
 }
 
-figure a{
+input[type=radio] {
+   /*display:none;*/
+}
+
+input[type=radio]:checked span{ 
+  color: red !important;
+}
+
+a{
     text-decoration: none;
+}
+a:visited {
+  color: black;
 }
 /*ELEMENTO: BOTON*/
 
 .circular {
-    color:black;
     background: #fff;
     margin-bottom: 2em;
     font-size: 1.4em;
     font-weight: normal !important;
     width:250px;
     height:250px;
-    border-radius:50%; 
+    border-radius:50%;
+    cursor: pointer;
 
     display: flex;
     flex-direction: column;
@@ -42,11 +58,32 @@ figure a{
     /*text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
 }
 
+.selected{
+  color: green;
+}
+
+/*Añade a .circular para animar elementos*/
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
 [class^="pe-7s-"], 
 [class*=" pe-7s-"],
 .las {
 	font-size: 4em;
-	font-weight: bold !important;
+	font-weight: bolder !important;
 }
 
 /*ESTILOS DE BOTONES*/
@@ -83,7 +120,6 @@ figure a{
     background: linear-gradient(180deg, #4ccd6d, #4dce9d) !important;
 }
 
-
 @media (min-width: 768px) {
     .circular {
         width:320px;
@@ -91,4 +127,56 @@ figure a{
     }
 }
 
+/* Hide all steps by default: */
+.tab {
+  display: none;
+  justify-content: space-around;
+}
+ 
 
+button {
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+@media (max-width: 578px) {
+    .tab {
+        flex-direction: column;
+
+    }
+
+}

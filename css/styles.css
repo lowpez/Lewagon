@@ -28,7 +28,17 @@ input[type=radio] {
 input[type=radio]:checked span{ 
   color: red !important;
 }
-
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;       /* Remove default arrow */
+  background-image: url('');   /* Add custom arrow */
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+select option{
+  
+}
 a{
     text-decoration: none;
 }
